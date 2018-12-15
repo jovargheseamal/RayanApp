@@ -20,7 +20,7 @@ public class UserFragment extends Fragment {
 
 
     public UserFragment() {
-        // Required empty public constructor
+        // Required empty public constructor test
     }
 
 
