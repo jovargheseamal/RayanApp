@@ -12,10 +12,12 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
+import android.widget.TextView;
 
 public class MainActivity extends BaseActivity {
 
 
+    TextView tvAppName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +31,10 @@ public class MainActivity extends BaseActivity {
         final UserFragment userFragment = new UserFragment();
         final EmployeeFragment employeeFragment=new EmployeeFragment();
 
+        Toolbar tb=getToolBar();
+        tvAppName=(TextView)tb.findViewById(R.id.appname);
+        tvAppName.setText("Company");
+
         setFragment(companyFragment);
 
 
@@ -38,17 +44,20 @@ public class MainActivity extends BaseActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 int id = menuItem.getItemId();
                 if( id == R.id.company) {
+                    tvAppName.setText("Company");
                     setFragment(companyFragment);
                     return true;
 
                 }
                 else if (id == R.id.users)
                 {
+                    tvAppName.setText("Users");
                     setFragment(userFragment);
                     return true;
                 }
                 else if (id == R.id.emp)
                 {
+                    tvAppName.setText("Employees");
                     setFragment(employeeFragment);
                     return true;
                 }

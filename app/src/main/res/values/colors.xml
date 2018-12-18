@@ -10,6 +10,9 @@
     <color name="gridtext">#ffad37</color>
     <color name="headerfont">#5d89a0</color>
     <color name="layoutBG">#c2d0d7</color>
+    <color name="ListBG"> #cbcfd2</color>
+    <color name="RecyclerBG"> #f2f2f1</color>
+
 
 
 

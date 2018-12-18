@@ -17,6 +17,9 @@ public class BaseActivity extends AppCompatActivity {
     public Toolbar toolbar;
     public TextView head;
 
+    public Toolbar getToolBar(){
+        return toolbar;
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +32,6 @@ public class BaseActivity extends AppCompatActivity {
         toggle= new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.Open,R.string.Close);
         drawerLayout.addDrawerListener(toggle);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
 
     }
 
